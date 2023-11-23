@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <title>Lista Interactiva</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding-right: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-3">
+    <h2>Selecciona una opción:</h2>
+
+    <div class="list-group">
+      <ul class="row col-12">
+        <li>
+          <a href="#" class="lista-objeto lista-objeto-accion" onclick="mostrarOcultarOpciones()">selecciona</a>
+        </li>
+
+        <li class="hidden-option">
+          <a href="#" class="lista-objeto lista-objeto-accion hidden">editorial</a>
+        </li>
+
+        <li class="hidden-option">
+          <a href="#" class="lista-objeto lista-objeto-accion hidden">packaging</a>
+        </li>
+
+        <li class="hidden-option">
+          <a href="#" class="lista-objeto lista-objeto-accion hidden">fotografía</a>
+        </li>
+        <li class="hidden-option">
+          <a href="#" class="lista-objeto lista-objeto-accion hidden">web design</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      $(".hidden-option").hide();
+    });
+
+    function mostrarOcultarOpciones() {
+      var opciones = $(".hidden-option");
+      if (opciones.is(":visible")) {
+        opciones.each(function (index) {
+          $(this).delay(300 * index).fadeOut(500);
+        });
+      } else {
+        opciones.each(function (index) {
+          $(this).delay(300 * (opciones.length - index - 1)).fadeIn(500);
+        });
+      }
+    }
+  </script>
+
+</body>
+
+</html>
