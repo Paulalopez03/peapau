@@ -1,15 +1,12 @@
-
-
-
 body {
 
     margin: 0%;
     background: linear-gradient(0deg, rgba(79, 144, 253, 1) 0%, rgba(0, 209, 79, 1) 53%, rgba(253, 153, 15, 1) 100%);
     background-attachment: fixed;
-     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='50%' font-size='25px'>🐀</text></svg>"), auto !important;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='50%' font-size='25px'>🐀</text></svg>"), auto !important;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='50%' font-size='25px'>🐀</text></svg>"), text !important;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='50%' font-size='25px'>🐀</text></svg>"), hand !important; 
- 
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><text y='50%' font-size='25px'>🐀</text></svg>"), hand !important;
+
 }
 
 @font-face {
@@ -171,20 +168,169 @@ p {
 }
 
 @keyframes moveDown {
-    0%, 100% {
-      transform: translateY(20);
+
+    0%,
+    100% {
+        transform: translateZ(20);
     }
+
     50% {
-      transform: translateY(-40px);
+        transform: translateZ(-40px);
     }
-   
-  }
-  @keyframes moveUp {
-    0%, 100% {
-      transform: translateY(-40);
+
+}
+
+@keyframes moveUp {
+
+    0%,
+    100% {
+        transform: translateZ(-40);
     }
+
     50% {
-      transform: translateY(20px);
+        transform: translateZ(20px);
     }
-   
-  }
+
+}
+
+button {
+    --gradient: rgb(255, 0, 0);
+    background: linear-gradient(90deg, var(--gradient), var(--gradient), var(--gradient));
+    background-size: 600%;
+    outline: 0;
+    padding: .2em .5em;
+    border-radius: .2em;
+    font-size: 10vmin;
+    border: none;
+    color: #c5ccd8;
+    animation: scrollbg linear 6s infinite, dundundun linear 1.3s infinite, scrollbg-hover linear 6s infinite;
+    filter: saturate(1);
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    transition: .2s ease;
+    cursor: pointer;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@keyframes scrollbg {
+    0% {
+        background-position: 33.333333333333333% 0%;
+    }
+
+    100% {
+        background-position: 75% 0%;
+    }
+}
+
+@keyframes dundundun {
+    0% {
+        transform: scale(1.05) rotate(1deg);
+    }
+
+    50% {
+        transform: scale(1.0);
+    }
+
+    50.01% {
+        transform: scale(1.05) rotate(-1deg);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes scrollbg-hover {
+    0% {
+        background-position: 33.333333333333333% 0%;
+    }
+
+    100% {
+        background-position: 75% 0%;
+    }
+}
+
+button:hover {
+    color: #c5ccd8;
+}
+
+button:active {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+button:before {
+    background-color: var(--bgColor);
+    content: '';
+    position: absolute;
+    left: .1em;
+    top: .1em;
+    width: calc(100% - .2em);
+    height: calc(100% - .2em);
+    border-radius: .1em;
+    z-index: -1;
+}
+
+button:active:before {
+    opacity: .8;
+}
+
+button:after {
+    background: inherit;
+    content: '';
+    position: absolute;
+    left: .2em;
+    top: .2em;
+    width: calc(100% - .4em);
+    height: calc(100% - .4em);
+    filter: blur(32px);
+    opacity: 0;
+    border-radius: .1em;
+    z-index: -2;
+}
+
+button:hover:after,
+button:active:after {
+    opacity: 1;
+    filter: blur(48px);
+}
+
+
+
+@keyframes Moerlado {
+    0% {
+        transform: translateX(0);
+        /* Comienza en la posición inicial (0 en el eje Y) */
+    }
+
+    50% {
+        transform: translateX(100px);
+        /* Llega a la mitad de la distancia, ajusta según sea necesario */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Termina en la posición final, ajusta según sea necesario */
+    }
+}
+
+@keyframes moverabajo {
+    0% {
+        transform: translateY(0);
+        /* Comienza en la posición inicial (0 en el eje Y) */
+      
+    }
+
+    50% {
+        transform: translateY(10px);
+        /* Llega a la mitad de la distancia, ajusta según sea necesario */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Termina en la posición final, ajusta según sea necesario */
+    }
+}
