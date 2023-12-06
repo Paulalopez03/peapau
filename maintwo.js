@@ -14,6 +14,7 @@ let isAnimating = false;
 
 function cambiarTitulo() {
   document.title = cloudTitle;
+  
 }
 
 function restaurarTitulo() {
@@ -62,5 +63,5 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
-// También, ejecutar la función al cargar la página para asegurarse de que el título sea correcto inicialmente
-cambiarTitulo();
+
+
