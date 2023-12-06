@@ -26,22 +26,27 @@
 
         .error-code {
             font-size: 6em;
-            color: #d6e73c; /* Color rojo para el código de error */
-            text-shadow: 3px 3px 5px #888888; /* Efecto relieve */
+            color: #d6e73c;
+            /* Color rojo para el código de error */
+            text-shadow: 3px 3px 5px #888888;
+            /* Efecto relieve */
             display: inline-block;
         }
 
-        .error-code span {  font-family: 'Impact', sans-serif !important;
+        .error-code span {
+            font-family: 'Impact', sans-serif !important;
             display: inline-block;
             animation: jump 0.5s infinite alternate;
         }
 
         .error-code span:nth-child(2) {
-            animation-delay: 0.2s; /* Retraso para el segundo número */
+            animation-delay: 0.2s;
+            /* Retraso para el segundo número */
         }
 
         .error-code span:nth-child(3) {
-            animation-delay: 0.4s; /* Retraso para el tercer número */
+            animation-delay: 0.4s;
+            /* Retraso para el tercer número */
         }
 
         .message {
@@ -77,9 +82,12 @@
 
         /* Animación de salto */
         @keyframes jump {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-20px);
             }
@@ -99,93 +107,84 @@
     </div>
 
 
+    <footer>
+        <div class="footer-two widget-area">
+            <aside id="custom_html-2" class="widget_text widget widget_custom_html">
+                <h3 class="widget-title">Website Carbon Badge</h3>
+                <div class="textwidget custom-html-widget">
+                    <div id="wcb" class="carbonbadge wcb-d">
+                        <style>
+                            #wcb {
+                                --b1: #e91111;
+                                --b2: #00ffbc;
+                                font-size: 15px;
+                                text-align: center;
+                                color: var(--b1)
+                            }
 
+                            #wcb sub {
+                                vertical-align: middle;
+                                position: relative;
+                                top: .3em;
+                                font-size: .7em
+                            }
 
+                            #wcb_2,
+                            #wcb_a,
+                            #wcb_g {
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                font-size: 1em;
+                                line-height: 1.15;
+                                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                                text-decoration: none;
+                                margin: .2em 0
+                            }
 
+                            #wcb_a,
+                            #wcb_g {
+                                padding: .3em .5em;
+                                border: .13em solid var(--b2)
+                            }
 
-    <div class="footer-two widget-area">
-        <aside id="custom_html-2" class="widget_text widget widget_custom_html">
-            <h3 class="widget-title">Website Carbon Badge</h3>
-            <div class="textwidget custom-html-widget">
-                <div id="wcb" class="carbonbadge wcb-d">
-                    <style>
-                        #wcb {
-                            --b1: #0e11a8;
-                            --b2: #ff00b3;
-                            font-size: 15px;
-                            text-align: center;
-                            color: var(--b1)
-                        }
+                            #wcb_g {
+                                border-radius: .3em 0 0 .3em;
+                                background: #fff;
+                                border-right: 0;
+                                min-width: 8.2em
+                            }
 
-                        #wcb sub {
-                            vertical-align: middle;
-                            position: relative;
-                            top: .3em;
-                            font-size: .7em
-                        }
+                            #wcb_a {
+                                border-radius: 0 .3em .3em 0;
+                                border-left: 0;
+                                background: var(--b1);
+                                color: #fff;
+                                font-weight: 700;
+                                border-color: var(--b1)
+                            }
 
-                        #wcb_2,
-                        #wcb_a,
-                        #wcb_g {
-                            display: inline-flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-align: center;
-                            font-size: 1em;
-                            line-height: 1.15;
-                            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-                            text-decoration: none;
-                            margin: .2em 0
-                        }
+                            .wcb-d #wcb_a {
+                                color: var(--b1);
+                                background: var(--b2);
+                                border-color: var(--b2)
+                            }
 
-                        #wcb_a,
-                        #wcb_g {
-                            padding: .3em .5em;
-                            border: .13em solid var(--b2)
-                        }
-
-                        #wcb_g {
-                            border-radius: .3em 0 0 .3em;
-                            background: #fff;
-                            border-right: 0;
-                            min-width: 8.2em
-                        }
-
-                        #wcb_a {
-                            border-radius: 0 .3em .3em 0;
-                            border-left: 0;
-                            background: var(--b1);
-                            color: #fff;
-                            font-weight: 700;
-                            border-color: var(--b1)
-                        }
-
-                        .wcb-d #wcb_a {
-                            color: var(--b1);
-                            background: var(--b2);
-                            border-color: var(--b2)
-                        }
-
-                        .wcb-d #wcb_2 {
-                            color: #fff
-                        }
-                    </style>
-                  
-                  
-
-
-
-
-
-
-
-             
-                            
+                            .wcb-d #wcb_2 {
+                                color: #fff
+                            }
+                        </style>
+                 
+                        <span id="wcb_2">&nbsp;</span>
+                    </div>
+                    <script src="https://unpkg.com/website-carbon-badges@1.1.1/b.min.js" defer=""></script>
                 </div>
-                <script src="https://unpkg.com/website-carbon-badges@1.1.1/b.min.js" defer=""></script>
-            </div>
-        </aside>
-    </div>
+            </aside>
+        </div>
+    </footer>
+
+
 
 
 
